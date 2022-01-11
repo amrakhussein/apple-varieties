@@ -77,7 +77,7 @@ const applesData = async (url = siteUrl) => {
     const jsonData = await applesData();
     const res = await JSON.stringify(jsonData);
     console.log(res);
-    fs.writeFile('appleInfo.json', res, 'utf-8', (err) => {
+    fs.writeFile('../app/appleInfo.json', res, 'utf-8', (err) => {
       if (err) {
         console.log('ERR::', err);
       }
