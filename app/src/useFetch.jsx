@@ -17,13 +17,14 @@ export function useFetch(url) {
       }
       try {
         let data = await fetch(url, opts);
-        let res = await data.json();
-        console.log('res:::', res);
-        setDataState(res);
-        if (!res.ok) throw new Error(`An Error has occured:: ${res.status}`); // set after setDataState due to unproper status code handling hindering data fetch
+        
+        // console.log('res:::', res);
+        setDataState(data);
+        if (!data.ok) throw new Error(`An Error has occured:: ${data.status}`); // set after setDataState due to unproper status code handling hindering data fetch
       } catch (err) {
+        // console.error(err)
         setError(err.message);
-        throw new Error(err.message);
+        // throw new Error(err.message);
       } finally {
         setLoading(false);
       }
