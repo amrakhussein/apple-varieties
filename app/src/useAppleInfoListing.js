@@ -1,9 +1,9 @@
-import { useFetch } from "./useFetch";
+
+import  appleInfo from './appleInfo.json'
 
 
 export function useAppleInfoListing() {
-    const { dataState } = useFetch('./appleInfo.json');
+    
 
-    console.log('heowijfjow', dataState)
-
+ 
 }
