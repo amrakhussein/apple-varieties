@@ -125,15 +125,15 @@ function App() {
         </div>
       </main>
       <footer className="bg-orange-200 mt-20 bottom-0  border-solid border-x-0 border-4 border-b-0  border-red-700">
-        {/* <div className="h-32"> */}
+
 
         {/* horizontal line red */}
         <div className=" flex flex-row  font-bold text-red-900 "></div>
 
         {/* credits Info */}
         <div className="pl-3 font-bold font-mono text-slate-700">
-          <h3 className="py-5 text-xl ">Credits:</h3>
-          <p>
+          <h3 className="pt-10  text-xl ">Credits:</h3>
+          <p className='pl-3'>
             Data scraped from:{' '}
             <span className="font-mono text-red-900">
               {' '}
@@ -142,7 +142,7 @@ function App() {
               </a>
             </span>
           </p>
-          <p>
+          <p className='pl-3'>
             Check{' '}
             <a
               className="text-red-900"
@@ -156,10 +156,11 @@ function App() {
           </p>
 
           {/* apple logo credits */}
-          <h4>
-            Apple Logo made by Ecology from{' '}
+          <h4 className='pl-3'>
+            Apple Logo made by Ecology from:{' '}
             <span>
               <a
+                className="text-red-900"
                 href="https://flaticon.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -170,9 +171,10 @@ function App() {
           </h4>
         </div>
 
-        <div className="  text-sm font-semibold font-mono pt-3 pl-3">
-          <p className="pr-3 text-gray-900  ">Designed with love: </p>
-          <span className="   text-slate-900">&copy; Amr Abdelkamel</span>
+        {/* web design by */}
+        <div className=" text-slate-600 text-sm font-semibold font-mono pt-3 pl-3">
+          <p className="pr-3  ">Designed with love: </p>
+          <span className="">&copy; Amr Abdelkamel</span>
         </div>
 
         <div className="flex flex-row justify-end pr-6 py-3">
@@ -187,8 +189,6 @@ function App() {
           <div className="border-solid   border-r-0 border-x-2  border-gray-500 mx-5 "></div>
           <Socials />
         </div>
-
-        {/* </div> */}
       </footer>
     </div>
   );
