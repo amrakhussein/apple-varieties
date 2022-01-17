@@ -4,6 +4,7 @@
 import appleInfo from './appleInfo.json';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Logo from './components/Logo';
 import Section from './components/Section';
 
 function App() {
@@ -29,8 +30,9 @@ function App() {
   // console.log('foo::', foo);
   return (
     <div className="bg-yellow-50 sm:bg-yellow-4f00 md:bg-yellow-60f0 lg:bg-yellow-80f0 f2xl:bg-slate-500 flex flex-col  ... scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-red-300 h-screen overflow-y-scroll">
+      <Logo />
+      <div className="shrink-0 h-14"></div>
       <Header />
-
       <figure className="w-full ... lg:hidden ">
         <figcaption>
           <img
