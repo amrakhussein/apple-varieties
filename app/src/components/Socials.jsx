@@ -34,7 +34,7 @@ export default function Socials() {
     <>
       <div className="flex flex-row m-1 space-x-6">
         {socials.map((item) => (
-          <a href={item.link} rel="noopener noreferrer" target="_blank" className="list-none hover:hue-rotate-90">
+          <a key={item.name} href={item.link} rel="noopener noreferrer" target="_blank" className="list-none hover:hue-rotate-90">
             {item.icon}
           </a>
         ))}
