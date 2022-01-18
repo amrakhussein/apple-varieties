@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/amromoorie/apple-varieties",
+  "homepage": "./",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

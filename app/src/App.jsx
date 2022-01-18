@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Logo from './components/Logo';
 import Section from './components/Section';
 import Hero from './images/Hero.jpg';
+
 function App() {
   const appleInfoHero = () => {
     // cleanup lists for each title
@@ -48,6 +49,7 @@ function App() {
         </figcaption>
       </figure>
       <main className="pl-2">
+
         {/* flex row starting from lg screen */}
         {/* Section contains Hero image for lg screen and above */}
         <Section />
