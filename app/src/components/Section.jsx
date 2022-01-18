@@ -1,4 +1,5 @@
 import appleInfo from '../appleInfo.json';
+import Hero from '../images/Hero.jpg'
 
 export default function Section() {
   const entryParagraph = appleInfo.entryContent.split('. ');
@@ -24,12 +25,14 @@ export default function Section() {
           </p>
         </div>
         <figure className="w-full ... hidden lg:block lg:inset-0  ... 2xl:w-[48rem] 2xl:ml-20">
+          <img
+            className="my-8 ml-5 rounded-xl  border-solid border-red-400 h-[28rem] w-full  object-cover object-center ...  "
+            src={Hero}
+            alt="apples served on plate"
+          />
+
+          {/* Hero image for lg screen and above */}
           <figcaption>
-            <img
-              className="my-8 ml-5 rounded-xl  border-solid border-red-400 h-[28rem] w-full  object-cover object-center ...  "
-              src={`${process.env.PUBLIC_URL}images/Hero.jpg`}
-              alt="apples served on plate"
-            />
             <p className="text-right text-slate-500 text-sm pr-3 lg:text-lg lg:mt-[-2rem]">
               Different apples' varieties and their uses
             </p>

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import logo from '../images/logo.png'
+import logo2 from '../images/logo2.png'
 
 export default function Logo() {
   const [logoHover, setLogoHover] = useState(false);
@@ -11,9 +13,8 @@ export default function Logo() {
         alt="apple-shaped logo"
         src={
           logoHover
-            ? `${process.env.PUBLIC_URL}images/logo2.png`
-            : `${process.env.PUBLIC_URL}images/logo.png`
-        }
+            ? logo2
+            : logo}
       />
     </figure>
   );
