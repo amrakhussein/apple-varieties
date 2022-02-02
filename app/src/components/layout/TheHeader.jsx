@@ -1,4 +1,4 @@
-import appleInfo from '../appleInfo.json';
+import appleInfo from '../../appleInfo.json';
 
 export default function Header() {
   return (

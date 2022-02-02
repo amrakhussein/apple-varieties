@@ -1,12 +1,14 @@
 // Data used:: from
 // -> https://pocketchangegourmet.com/the-definitive-guide-to-apples-and-their-uses/'
 
-import appleInfo from './appleInfo.json';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Logo from './components/Logo';
-import Section from './components/Section';
-import Hero from './images/Hero.jpg';
+import Layout from './layout/TheLayout'
+import appleInfo from '../appleInfo.json';
+import Footer from './layout/TheFooter';
+import Header from './layout/TheHeader';
+import Logo from './layout/TheLogo';
+import Section from './Section';
+import Hero from '../images/Hero.jpg';
+
 
 function App() {
   const appleInfoHero = () => {
@@ -30,7 +32,7 @@ function App() {
   // let foo = appleInfoHero();
   // console.log('foo::', foo);
   return (
-    <div className="bg-yellow-50 sm:bg-yellow-4f00 md:bg-yellow-60f0 lg:bg-yellow-80f0 f2xl:bg-slate-500 flex flex-col  ... scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-red-300 h-screen overflow-y-scroll">
+    <Layout>
       <Logo />
       <div className="shrink-0 h-14"></div>
       <Header />
@@ -41,14 +43,14 @@ function App() {
           className="mt-8 rounded-tl-xl rounded-br-xl border-x-0 border-solid border-red-400 h-[26rem] w-full  object-cover object-top ... sm:h-96 sm:w-full sm:object-cover sm:object-center  ... md:h-[30rem]"
           src={Hero}
           alt="apples served on plate"
-        />
+          />
         <figcaption>
           <p className="text-right text-slate-500 text-sm pr-3 ">
             Different apples' varieties and their uses
           </p>
         </figcaption>
       </figure>
-      <main className="pl-2">
+      <main className="">
 
         {/* flex row starting from lg screen */}
         {/* Section contains Hero image for lg screen and above */}
@@ -63,27 +65,27 @@ function App() {
               <h3
                 key={idx}
                 className=" pb-2 d mt-10 text-3xl font-bold text-slate-700 ... sm:mt-10"
-              >
+                >
                 {data.title}
               </h3>
               <ul className="border-solid border-red-300 border-x-2 border-y-0 border-r-0 pl-2 ... ">
                 {data.content.map((lists, idx) =>
                   lists.map((li, idx) => (
                     <li
-                      key={idx}
-                      className="list-inside pl-4 prose text-md ... sm:leading-normal sm:text-lg   "
+                    key={idx}
+                    className="list-inside pl-4 prose text-md ... sm:leading-normal sm:text-lg   "
                     >
                       {li.replace(/\./g, '')}
                     </li>
                   ))
-                )}
+                  )}
               </ul>
-            </>
+              </>
           ))}
         </div>
       </main>
       <Footer />
-    </div>
+    </Layout>
   );
 }
 

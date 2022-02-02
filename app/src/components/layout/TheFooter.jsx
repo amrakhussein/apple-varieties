@@ -1,4 +1,4 @@
-import ConnectSocials from './ConnectSocials';
+import ConnectSocials from '../micros/ConnectSocials';
 
 export default function Footer() {
   return (

@@ -15,7 +15,7 @@ export default function Section() {
             {entryParagraph[2]}. <br></br> {entryParagraph[3]}.
           </p>
 
-          <h2 className=" mt-10  text-3xl font-bold text-slate-700 ... sm:mt-10 ... lg:text-4xl lg:ml-[-1.6rem] ">
+          <h2 className=" my-10 text-3xl font-bold text-slate-700 ... sm:mt-10 ... lg:text-4xl lg:ml-[-1.6rem] ">
             {appleInfo.appleCharacteristics.title}
           </h2>
           <p className="mt-[-1rem]">{appleLearnMore[0]}.</p>
