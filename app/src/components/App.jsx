@@ -2,38 +2,37 @@
 // -> https://pocketchangegourmet.com/the-definitive-guide-to-apples-and-their-uses/'
 
 import Layout from './layout/TheLayout'
-import appleInfo from '../appleInfo.json';
-import Footer from './layout/TheFooter';
-import Header from './layout/TheHeader';
-import Logo from './layout/TheLogo';
-import Section from './Section';
-import Hero from '../images/Hero.jpg';
-
+import appleInfo from '../appleInfo.json'
+import Footer from './layout/TheFooter'
+import Header from './layout/TheHeader'
+import Logo from './layout/TheLogo'
+import Section from './Section'
+import Hero from '../images/Hero.jpg'
 
 function App() {
   const appleInfoHero = () => {
     // cleanup lists for each title
     let lists = appleInfo.appleTypesDetail.map((i) =>
       i.content.map((li) => li.split('. '))
-    );
-    let titles = appleInfo.appleTypesDetail.map((i) => i.title);
+    )
+    let titles = appleInfo.appleTypesDetail.map((i) => i.title)
 
     // generate json for UI mapping
     let appleJSON = () => {
       let output = titles.reduce((acc, curr, i) => {
-        acc.push({ title: curr, content: lists[i] });
-        return acc;
-      }, []);
+        acc.push({ title: curr, content: lists[i] })
+        return acc
+      }, [])
       // console.log('apple JSON::', output);
-      return output;
-    };
-    return appleJSON();
-  };
+      return output
+    }
+    return appleJSON()
+  }
   // let foo = appleInfoHero();
   // console.log('foo::', foo);
   return (
     <Layout>
-      <Logo />
+    <Logo />
       <div className="shrink-0 h-14"></div>
       <Header />
 
@@ -50,8 +49,7 @@ function App() {
           </p>
         </figcaption>
       </figure>
-      <main className="">
-
+      <main className="px-3">
         {/* flex row starting from lg screen */}
         {/* Section contains Hero image for lg screen and above */}
         <Section />
@@ -65,28 +63,28 @@ function App() {
               <h3
                 key={idx}
                 className=" pb-2 d mt-10 text-3xl font-bold text-slate-700 ... sm:mt-10"
-                >
+              >
                 {data.title}
               </h3>
               <ul className="border-solid border-red-300 border-x-2 border-y-0 border-r-0 pl-2 ... ">
                 {data.content.map((lists, idx) =>
                   lists.map((li, idx) => (
                     <li
-                    key={idx}
-                    className="list-inside pl-4 prose text-md ... sm:leading-normal sm:text-lg   "
+                      key={idx}
+                      className="list-inside pl-4 prose text-md ... sm:leading-normal sm:text-lg   "
                     >
                       {li.replace(/\./g, '')}
                     </li>
                   ))
-                  )}
+                )}
               </ul>
-              </>
+            </>
           ))}
         </div>
       </main>
       <Footer />
     </Layout>
-  );
+  )
 }
 
-export default App;
+export default App
